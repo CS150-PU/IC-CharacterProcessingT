@@ -31,13 +31,14 @@ int main () {
 
 
   // TODO #3: Ask the user to enter a file for writing to. Open the file
-  //          for writing
+  //          for writing and error check.
 
 
   // TODO #4: Create a file gettysburg_formatted.txt that replaces the
   //          first blank after character 70 with a line return.
-  inFile.clear ();
-  inFile.seekg (0);
+
+  inFile.clear ();  // clears all error flags including EOF flag
+  inFile.seekg (0); // resets file stream pointer to file beginning
 
   inFile.close ();
   outFile.close ();
